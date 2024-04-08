@@ -35,15 +35,14 @@ const App = () => {
   }
 
   const handleRemNumber = () => {
-
-    if(firstNumber === '0'){
+    if (operation === '') {
       setFirstNumber(String(currentNumber));
-      setCurrentNumber('0')
+      setCurrentNumber('0');
       setOperation('-');
-    }else{
+    } else {
       const rem = Number(firstNumber) - Number(currentNumber);
       setCurrentNumber(String(rem));
-      setOperation('')
+      setOperation('');
     }
   }
 
